@@ -1,3 +1,40 @@
+/* Оранжевый лоадер для сайдбара */
+.sidebar-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.92);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.sidebar-loader-spinner {
+    width: 48px;
+    height: 48px;
+    border: 6px solid #ff9800;
+    border-top: 6px solid #fff3e0;
+    border-radius: 50%;
+    animation: sidebar-spin 1s linear infinite;
+    box-sizing: border-box;
+}
+
+@keyframes sidebar-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.sidebar-loader-text {
+    color: #ff9800;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
 #map {
     position: fixed;
     inset: 0;
